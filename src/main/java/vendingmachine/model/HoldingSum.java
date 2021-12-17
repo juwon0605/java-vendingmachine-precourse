@@ -35,4 +35,8 @@ public class HoldingSum {
 
 		return coinMap;
 	}
+
+	public int getCoinCount(String coinName) {
+		return holdingSum.getOrDefault(coinName, 0);
+	}
 }

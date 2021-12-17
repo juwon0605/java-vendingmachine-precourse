@@ -15,6 +15,10 @@ public enum Coin {
 		this.amount = amount;
 	}
 
+	public int getAmount() {
+		return amount;
+	}
+
 	public static List<Integer> getAmountList() {
 		List<Integer> amountList = new ArrayList<>();
 
@@ -25,7 +29,7 @@ public enum Coin {
 		return amountList;
 	}
 
-	public static String getName(Integer amount) {
+	public static String getName(int amount) {
 
 		for (Coin coin : values()) {
 
