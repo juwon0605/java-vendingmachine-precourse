@@ -37,4 +37,12 @@ public class StringChecker {
 		}
 
 	}
+
+	public void isLessMaxLength(String input, int maxLength) {
+
+		if (input.length() > maxLength) {
+			throw new IllegalArgumentException(maxLength + Message.ERROR_EXCEED_MAX_LENGTH);
+		}
+
+	}
 }

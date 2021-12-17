@@ -33,5 +33,6 @@ public class Message {
 	public static final String ERROR_CONTAINS_SPACE = "공백이 포함될 수 없습니다.";
 	public static final String ERROR_CONTAINS_TAP = "탭이 포함될 수 없습니다.";
 	public static final String ERROR_NOT_BRACKET = "개별 상품은 " + Rule.BRACKET + "로 묶어야합니다.";
+	public static final String ERROR_EXCEED_MAX_LENGTH = "자 이하여야합니다.";
 
 }
