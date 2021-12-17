@@ -19,7 +19,6 @@ public class HoldingSum {
 		NumberChecker numberChecker = new NumberChecker();
 		numberChecker.isPositiveInteger(input);
 		numberChecker.isDivisibleNumber(input, Coin.getMinAmount());
-
 	}
 
 	private Map<String, Integer> generateCoinRandomly(String input) {
