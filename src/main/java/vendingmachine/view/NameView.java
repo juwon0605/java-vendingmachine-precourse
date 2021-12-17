@@ -1,0 +1,19 @@
+package vendingmachine.view;
+
+import camp.nextstep.edu.missionutils.Console;
+import vendingmachine.constant.Message;
+import vendingmachine.model.Name;
+
+public class NameView {
+
+	public Name getInput() {
+		System.out.println(Message.INPUT_NAME);
+		try {
+			String input = Console.readLine();
+			return new Name(input);
+		} catch (IllegalArgumentException e) {
+			System.out.println(Message.ERROR + e.getMessage() + "\n");
+			return getInput();
+		}
+	}
+}
