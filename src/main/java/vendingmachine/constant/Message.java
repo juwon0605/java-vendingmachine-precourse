@@ -26,6 +26,7 @@ public class Message {
 	public static final String ERROR_POSITIVE_INTEGER = "양의 정수를 입력해주세요.";
 	public static final String ERROR_EXCEED_INTEGER = Integer.MAX_VALUE + "이하를 입력해 주세요.";
 	public static final String ERROR_DIVISIBLE_NUMBER = "단위의 정수를 입력해 주세요.";
+	public static final String ERROR_LESS_THAN_MIN = "이상을 입력해 주세요.";
 	public static final String ERROR_LENGTH_ZERO = "1자 이상을 입력해주세요";
 	public static final String ERROR_INPUT_IS_EMPTY = "아무것도 입력되지 않았습니다.";
 	public static final String ERROR_CONTAINS_SPACE = "공백이 포함될 수 없습니다.";

@@ -44,4 +44,12 @@ public class NumberChecker {
 		}
 
 	}
+
+	public void isLessThan(String input, int min) {
+
+		if (Integer.valueOf(input) < min) {
+			throw new IllegalArgumentException(min + Message.ERROR_LESS_THAN_MIN);
+		}
+
+	}
 }

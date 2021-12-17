@@ -9,6 +9,8 @@ import java.util.Map;
 
 import vendingmachine.constant.Message;
 import vendingmachine.constant.Rule;
+import vendingmachine.util.SplitChecker;
+import vendingmachine.util.StringChecker;
 
 public class Products {
 
@@ -21,14 +23,25 @@ public class Products {
 
 		for (String productInfo : productInfoList) {
 			Product product = new Product(productInfo);
+
+			if (productMap.containsKey(product.getName())) {
+				throw new IllegalArgumentException(Message.ERROR_DUPLICATION);
+			}
+
 			productMap.put(product.getName(), product);
 		}
-
 		products = productMap;
 	}
 
 	private void checkInput(String input) {
-		//상품명 중복도 여기서 검사
+		StringChecker stringChecker = new StringChecker();
+		stringChecker.isEmpty(input);
+		stringChecker.containSpace(input);
+		stringChecker.containTap(input);
+
+		SplitChecker splitChecker = new SplitChecker();
+		splitChecker.exceedMaxSplit(input, Rule.DELIMITER_PRODUCTS);
+		splitChecker.hasZeroLength(input, Rule.DELIMITER_PRODUCTS);
 	}
 
 	public boolean isEmpty() {
