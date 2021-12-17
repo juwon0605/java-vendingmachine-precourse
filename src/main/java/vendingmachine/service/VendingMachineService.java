@@ -1,5 +1,6 @@
 package vendingmachine.service;
 
+import vendingmachine.constant.Message;
 import vendingmachine.model.VendingMachine;
 import vendingmachine.view.InsertingSumView;
 import vendingmachine.view.NameView;
@@ -18,10 +19,12 @@ public class VendingMachineService {
 	private VendingMachine sellProduct(VendingMachine vendingMachine) {
 		InsertingSumView insertingSumView = new InsertingSumView();
 		insertingSumView.print(vendingMachine.getInsertingSum());
-
 		NameView nameView = new NameView();
-		vendingMachine.sellProduct(nameView.getInput());
-
+		try {
+			vendingMachine.sellProduct(nameView.getInput());
+		} catch (IllegalArgumentException e) {
+			System.out.println(Message.ERROR + e.getMessage() + "\n");
+		}
 		return vendingMachine;
 	}
 }

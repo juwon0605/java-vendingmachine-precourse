@@ -15,4 +15,6 @@ public class Message {
 	public static final String OUTPUT_INSERTING_SUM = "투입 금액: ";
 
 	public static final String ERROR = "[ERROR]";
+	public static final String ERROR_NOT_EXIST_PRODUCT = "없는 상품입니다.";
+	public static final String ERROR_LACK_OF_INSERTING_SUM = "투입 금액이 부족합니다.";
 }

@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import vendingmachine.constant.Message;
 import vendingmachine.constant.Rule;
 
 public class Products {
@@ -46,5 +47,31 @@ public class Products {
 		}
 
 		return priceList;
+	}
+
+	public Product giveProduct(Name name) {
+		Product selectedProduct = getProduct(name);
+		minusProduct(selectedProduct);
+		return selectedProduct;
+	}
+
+	public Product getProduct(Name name) {
+		Product selectedProduct = products.get(name);
+
+		if (selectedProduct == null) {
+			throw new IllegalArgumentException(Message.ERROR_NOT_EXIST_PRODUCT);
+		}
+
+		return selectedProduct;
+	}
+
+	private void minusProduct(Product product) {
+		product.minusTheNumberOf();
+
+		if (product.isEmpty()) {
+			products.remove(product.getName());
+		}
+
+		products.put(product.getName(), product);
 	}
 }

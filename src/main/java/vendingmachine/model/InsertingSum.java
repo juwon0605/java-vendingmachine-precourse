@@ -25,4 +25,8 @@ public class InsertingSum {
 
 		return false;
 	}
+
+	public void subtractPrice(Price price) {
+		insertingSum -= price.get();
+	}
 }

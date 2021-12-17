@@ -1,5 +1,7 @@
 package vendingmachine.model;
 
+import vendingmachine.constant.Message;
+
 public class VendingMachine {
 
 	private HoldingSum holdingSum;
@@ -40,6 +42,17 @@ public class VendingMachine {
 	}
 
 	public void sellProduct(Name name) {
+		checkInsertingSum(name);
+		Product soldProduct = products.giveProduct(name);
+		insertingSum.subtractPrice(soldProduct.getPrice());
+	}
+
+	private void checkInsertingSum(Name name) {
+		Product selectedProduct = products.getProduct(name);
+
+		if (insertingSum.isLessThan(selectedProduct.getPrice())) {
+			throw new IllegalArgumentException(Message.ERROR_LACK_OF_INSERTING_SUM);
+		}
 
 	}
 

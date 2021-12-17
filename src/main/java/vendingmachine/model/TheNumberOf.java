@@ -12,4 +12,17 @@ public class TheNumberOf {
 	private void checkInput(String input) {
 
 	}
+
+	public void minus() {
+		theNumberOf--;
+	}
+
+	public boolean isZero() {
+
+		if (theNumberOf == 0) {
+			return true;
+		}
+
+		return false;
+	}
 }

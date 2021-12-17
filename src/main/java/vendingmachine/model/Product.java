@@ -31,4 +31,12 @@ public class Product {
 	public Price getPrice() {
 		return price;
 	}
+
+	public void minusTheNumberOf() {
+		theNumberOf.minus();
+	}
+
+	public boolean isEmpty() {
+		return theNumberOf.isZero();
+	}
 }
