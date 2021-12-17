@@ -32,7 +32,6 @@ public class HoldingSum {
 			}
 
 		}
-
 		return coinMap;
 	}
 

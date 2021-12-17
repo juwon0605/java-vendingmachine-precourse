@@ -2,6 +2,7 @@ package vendingmachine.controller;
 
 import vendingmachine.model.VendingMachine;
 import vendingmachine.service.VendingMachineService;
+import vendingmachine.view.ChangeView;
 import vendingmachine.view.HoldingSumView;
 import vendingmachine.view.InsertingSumView;
 import vendingmachine.view.ProductsView;
@@ -29,8 +30,8 @@ public class VendingMachineController {
 		VendingMachineService vendingMachineService = new VendingMachineService();
 		vendingMachine = vendingMachineService.sellProductUntilPossible(vendingMachine);
 
-		// insertingSumView.print(vendingMachine.getInsertingSum());
-		// ChangeView changeView = new ChangeView();
-		// changeView.print(vendingMachine.getChange());
+		insertingSumView.print(vendingMachine.getInsertingSum());
+		ChangeView changeView = new ChangeView();
+		changeView.print(vendingMachine.getChange());
 	}
 }

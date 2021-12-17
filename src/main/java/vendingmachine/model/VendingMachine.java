@@ -57,6 +57,8 @@ public class VendingMachine {
 	}
 
 	public Change getChange() {
-		return new Change();
+		Change change = new Change(insertingSum, holdingSum);
+		holdingSum.subtractChange(change);
+		return change;
 	}
 }
