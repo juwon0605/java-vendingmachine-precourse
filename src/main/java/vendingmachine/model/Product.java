@@ -27,4 +27,8 @@ public class Product {
 	public Name getName() {
 		return name;
 	}
+
+	public Price getPrice() {
+		return price;
+	}
 }

@@ -16,4 +16,13 @@ public class InsertingSum {
 	public int get() {
 		return insertingSum;
 	}
+
+	public boolean isLessThan(Price price) {
+
+		if (insertingSum < price.get()) {
+			return true;
+		}
+
+		return false;
+	}
 }

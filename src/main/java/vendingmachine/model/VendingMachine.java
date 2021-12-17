@@ -27,7 +27,16 @@ public class VendingMachine {
 	}
 
 	public boolean isPossibleToSell() {
-		return false;
+
+		if (products.isEmpty()) {
+			return false;
+		}
+
+		if (insertingSum.isLessThan(products.getMinPrice())) {
+			return false;
+		}
+
+		return true;
 	}
 
 	public void sellProduct(Name name) {
