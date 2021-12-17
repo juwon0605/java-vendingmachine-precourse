@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import vendingmachine.util.NumberChecker;
 
 public class HoldingSum {
 
@@ -15,6 +16,9 @@ public class HoldingSum {
 	}
 
 	private void checkInput(String input) {
+		NumberChecker numberChecker = new NumberChecker();
+		numberChecker.isPositiveInteger(input);
+		numberChecker.isDivisibleNumber(input, Coin.getMinAmount());
 
 	}
 

@@ -3,6 +3,10 @@ package vendingmachine.constant;
 public class Message {
 
 	public static final String LINE = " - ";
+	public static final String EMPTY = "";
+	public static final String SPACE = " ";
+	public static final String TAP = "	";
+
 	public static final String WON = "원";
 	public static final String EA = "개";
 
@@ -18,4 +22,13 @@ public class Message {
 	public static final String ERROR = "[ERROR]";
 	public static final String ERROR_NOT_EXIST_PRODUCT = "없는 상품입니다.";
 	public static final String ERROR_LACK_OF_INSERTING_SUM = "투입 금액이 부족합니다.";
+	public static final String ERROR_DUPLICATION = "중복이 없어야 합니다.";
+	public static final String ERROR_POSITIVE_INTEGER = "양의 정수를 입력해주세요.";
+	public static final String ERROR_EXCEED_INTEGER = Integer.MAX_VALUE + "이하를 입력해 주세요.";
+	public static final String ERROR_DIVISIBLE_NUMBER = "단위의 정수를 입력해 주세요.";
+	public static final String ERROR_LENGTH_ZERO = "1자 이상을 입력해주세요";
+	public static final String ERROR_INPUT_IS_EMPTY = "아무것도 입력되지 않았습니다.";
+	public static final String ERROR_CONTAINS_SPACE = "공백이 포함될 수 없습니다.";
+	public static final String ERROR_CONTAINS_TAP = "탭이 포함될 수 없습니다.";
+
 }

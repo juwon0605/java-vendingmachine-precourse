@@ -1,6 +1,7 @@
 package vendingmachine.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public enum Coin {
@@ -40,5 +41,9 @@ public enum Coin {
 		}
 
 		return null;
+	}
+
+	public static int getMinAmount() {
+		return Collections.min(getAmountList());
 	}
 }
