@@ -38,4 +38,14 @@ public class HoldingSum {
 	public int getCoinCount(String coinName) {
 		return holdingSum.getOrDefault(coinName, 0);
 	}
+
+	public void subtractChange(Change change) {
+
+		for (Map.Entry<String, Integer> changeEntry : change.getEntrySet()) {
+			String coinName = changeEntry.getKey();
+			Integer coinCount = changeEntry.getValue();
+			holdingSum.put(coinName, holdingSum.get(coinName) - coinCount);
+		}
+
+	}
 }

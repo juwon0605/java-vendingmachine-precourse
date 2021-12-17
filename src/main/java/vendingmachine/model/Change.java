@@ -2,6 +2,7 @@ package vendingmachine.model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Change {
 
@@ -24,7 +25,14 @@ public class Change {
 			}
 
 		}
-		
 		return coinMap;
+	}
+
+	public Set<Map.Entry<String, Integer>> getEntrySet() {
+		return change.entrySet();
+	}
+
+	public Integer getCoinCount(String coinName) {
+		return change.getOrDefault(coinName, 0);
 	}
 }

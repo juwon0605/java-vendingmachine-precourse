@@ -29,7 +29,7 @@ public class HoldingSumView {
 			List<String> coinInfo = new ArrayList<>();
 			coinInfo.add(coin.getAmount() + Message.WON);
 			coinInfo.add(holdingSum.getCoinCount(coin.name()) + Message.EA);
-			holdingSumState.append(String.join(Message.COLON, coinInfo) + "\n");
+			holdingSumState.append(String.join(Message.LINE, coinInfo) + "\n");
 		}
 
 		System.out.println(holdingSumState);
