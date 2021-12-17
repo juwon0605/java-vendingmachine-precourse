@@ -12,4 +12,8 @@ public class InsertingSum {
 	private void checkInput(String input) {
 
 	}
+
+	public int get() {
+		return insertingSum;
+	}
 }

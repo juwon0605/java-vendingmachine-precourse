@@ -19,7 +19,8 @@ public class InsertingSumView {
 	}
 
 	public void print(InsertingSum insertingSum) {
-		System.out.print(Message.OUTPUT_INSERTING_SUM);
-
+		StringBuilder insertingSumState = new StringBuilder(Message.OUTPUT_INSERTING_SUM);
+		insertingSumState.append(insertingSum.get() + Message.WON);
+		System.out.println(insertingSumState);
 	}
 }
