@@ -28,8 +28,10 @@ public class Message {
 	public static final String ERROR_DIVISIBLE_NUMBER = "단위의 정수를 입력해 주세요.";
 	public static final String ERROR_LESS_THAN_MIN = "이상을 입력해 주세요.";
 	public static final String ERROR_LENGTH_ZERO = "1자 이상을 입력해주세요";
+	public static final String ERROR_THE_NUMBER_OF = "개를 입력해주세요.";
 	public static final String ERROR_INPUT_IS_EMPTY = "아무것도 입력되지 않았습니다.";
 	public static final String ERROR_CONTAINS_SPACE = "공백이 포함될 수 없습니다.";
 	public static final String ERROR_CONTAINS_TAP = "탭이 포함될 수 없습니다.";
+	public static final String ERROR_NOT_BRACKET = "개별 상품은 " + Rule.BRACKET + "로 묶어야합니다.";
 
 }

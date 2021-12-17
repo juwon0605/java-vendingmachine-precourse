@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 import vendingmachine.constant.Rule;
+import vendingmachine.util.SplitChecker;
+import vendingmachine.util.StringChecker;
 
 public class Product {
 
@@ -21,7 +23,11 @@ public class Product {
 	}
 
 	private void checkInput(String input) {
+		StringChecker stringChecker = new StringChecker();
+		stringChecker.inBracket(input);
 
+		SplitChecker splitChecker = new SplitChecker();
+		splitChecker.isCorrectTheNumber(input, Rule.DELIMITER_PRODUCT_INFO, Rule.NUMBER_OF_PRODUCT_INFO);
 	}
 
 	public Name getName() {

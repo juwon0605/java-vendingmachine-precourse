@@ -27,4 +27,13 @@ public class SplitChecker {
 		}
 
 	}
+
+	public void isCorrectTheNumber(String input, String DELIMETER, int correctTheNumber) {
+		List<String> inputList = Arrays.asList(input.split(DELIMETER, -1));
+
+		if (inputList.size() != correctTheNumber) {
+			throw new IllegalArgumentException(correctTheNumber + Message.ERROR_THE_NUMBER_OF);
+		}
+
+	}
 }
