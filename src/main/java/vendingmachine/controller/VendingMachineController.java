@@ -1,11 +1,7 @@
 package vendingmachine.controller;
 
 import vendingmachine.model.VendingMachine;
-import vendingmachine.service.VendingMachineService;
-import vendingmachine.view.ChangeView;
 import vendingmachine.view.HoldingSumView;
-import vendingmachine.view.InsertingSumView;
-import vendingmachine.view.ProductsView;
 
 public class VendingMachineController {
 

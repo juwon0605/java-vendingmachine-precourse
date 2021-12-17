@@ -10,6 +10,7 @@ public class InsertingSumView {
 		System.out.println(Message.INPUT_INSERTING_SUM);
 		try {
 			String input = Console.readLine();
+			System.out.println();
 			return new InsertingSum(input);
 		} catch (IllegalArgumentException e) {
 			System.out.println(Message.ERROR + e.getMessage() + "\n");

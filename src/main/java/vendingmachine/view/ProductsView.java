@@ -10,6 +10,7 @@ public class ProductsView {
 		System.out.println(Message.INPUT_PRODUCTS);
 		try {
 			String input = Console.readLine();
+			System.out.println();
 			return new Products(input);
 		} catch (IllegalArgumentException e) {
 			System.out.println(Message.ERROR + e.getMessage() + "\n");

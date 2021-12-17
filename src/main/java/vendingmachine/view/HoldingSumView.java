@@ -10,6 +10,7 @@ public class HoldingSumView {
 		System.out.println(Message.INPUT_HOLDING_SUM);
 		try {
 			String input = Console.readLine();
+			System.out.println();
 			return new HoldingSum(input);
 		} catch (IllegalArgumentException e) {
 			System.out.println(Message.ERROR + e.getMessage() + "\n");
